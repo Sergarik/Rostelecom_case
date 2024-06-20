@@ -1,16 +1,16 @@
 
 
-# import time
+import time
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-# from faker import Faker
+from faker import Faker
 
 
 @pytest.fixture(autouse=True)
 def browser():
 
-    s = Service(executable_path='D:\Test\chromedriver-win64\chromedriver.exe')
+    s = Service(executable_path='C:\chrome\driver\chromedriver.exe')
     driver = webdriver.Chrome(service=s)
 
     yield driver
